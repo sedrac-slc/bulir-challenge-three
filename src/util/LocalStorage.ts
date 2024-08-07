@@ -10,6 +10,7 @@ export class LocalStorage {
         localStorage.removeItem(this.KEY_PERSON_TYPE);
     }
 
+    
     static setItemToken(value: any) {
         localStorage.setItem(this.KEY_TOKEN, value.toString());
     }
