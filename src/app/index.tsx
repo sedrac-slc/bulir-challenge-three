@@ -1,19 +1,26 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export default function HomeScreen() {
   return (
-    <View className="w-full h-full flex justify-center items-center">
-      <View className="p-5">
-        <Text className="text-center text-5xl">Bulir</Text>
-        <Text className="mx-6 my-6">Bem vindo a bulir mobile</Text>
-        <View className="flex gap-4">
-          <Link href="/login" className="text-white text-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-            Login
-          </Link>
-          <Link href="/register" className="text-white text-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-            Cadastramento
-          </Link>          
+    <View className="bg-slate-300 flex justify-center items-center h-full">
+      <View className="bg-blue-400 mt-10 w-screen p-2 absolute top-0">
+        <Text className="text-5xl text-white mt-10">Bem vindo</Text>
+        <Text className="text-3xl text-white mt-3 mb-2">Bulir challenge tree</Text>
+      </View>
+      <View>
+        <View className="gap-8">
+          <TouchableOpacity className="w-screen">
+            <Link href="/login" className="w-80 bg-blue-600 p-5 px-2.5 rounded-xl text-white text-center" >
+              Autenticação
+            </Link>
+          </TouchableOpacity>
+
+          <TouchableOpacity className="w-screen">
+            <Link href="/register" className="w-80 bg-blue-600 p-5 px-2.5 rounded-xl text-white text-center" >
+              Cadastramento
+            </Link>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
